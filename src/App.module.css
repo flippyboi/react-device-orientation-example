@@ -39,6 +39,11 @@
     border: 1px solid #dbd9d9;
     border-radius: 10px;
     position: relative;
+    transition: border 0.3s;
+}
+
+.carousel_block[data-visible=false] {
+    border: 2px solid red;
 }
 
 .info {

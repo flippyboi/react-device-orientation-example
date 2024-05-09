@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 import { useDeviceOrientation } from './hooks/useDeviceOrientation';
-import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './components/ui/carousel';
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from './components/ui/carousel';
 import { Card, CardContent } from './components/ui/card';
 
 declare module 'react' {
@@ -31,7 +31,7 @@ function App() {
                 <span data-landscape={isLandscape}>landscape: {JSON.stringify(isLandscape)}</span>
             </div>
             <div className={styles.state}></div>
-            <div className={styles.carousel_block}>
+            <div className={styles.carousel_block} data-visible={isInHand}>
                 <Carousel setApi={setApi} className="w-full rounded-lg">
                     <CarouselContent className="rounded-lg">
                         {Array.from({ length: 5 }).map((_, index) => (
