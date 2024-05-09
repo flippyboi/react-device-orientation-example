@@ -32,7 +32,7 @@ export const useDeviceOrientation = () => {
         return or.gamma < -35 && or.gamma > -90;
       }
 
-      return or.beta > 35 && or.beta < 90
+      return or.beta > 30 && or.beta < 90
     }, [isLandscape, or.beta, or.gamma]);
 
     React.useEffect(() => {
